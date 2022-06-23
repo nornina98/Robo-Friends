@@ -1,8 +1,8 @@
 h1 {
-      font-family: cursive, 'Times New Roman', Times, serif;
-      font-style: normal;
-      font-weight: 200px;
-      color: aliceblue;
-      text-shadow: black;
-      -webkit-text-stroke: 2px black; 
-  }
+  font-family: cursive, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 200px;
+  color: aliceblue;
+  text-shadow: black;
+  -webkit-text-stroke: 2px black;
+}
