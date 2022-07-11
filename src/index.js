@@ -1,10 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import * as ReactDOMClient from "react-dom/client";
 import { Provider } from "react-redux";
 import { createLogger } from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 import App from "./containers/App";
-import * as serviceWorker from "./serviceWorker";
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { searchRobots, requestRobots } from "./reducers";
 
@@ -20,11 +19,11 @@ const store = createStore(
   applyMiddleware(thunkMiddleware, logger)
 );
 
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const root = ReactDOMClient.createRoot(rootElement);
+
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById("root")
+  </Provider>
 );
-
-serviceWorker.unregister();
